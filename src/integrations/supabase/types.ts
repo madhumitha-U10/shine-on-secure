@@ -14,36 +14,13 @@ export type Database = {
   }
   public: {
     Tables: {
-      seller_accounts: {
-        Row: {
-          created_at: string
-          nammaspot_id: string
-          profile: Json | null
-          seller_id: string | null
-          user_id: string
-        }
-        Insert: {
-          created_at?: string
-          nammaspot_id: string
-          profile?: Json | null
-          seller_id?: string | null
-          user_id: string
-        }
-        Update: {
-          created_at?: string
-          nammaspot_id?: string
-          profile?: Json | null
-          seller_id?: string | null
-          user_id?: string
-        }
-        Relationships: []
-      }
+      [_ in never]: never
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      nammaspot_id_available: { Args: { _id: string }; Returns: boolean }
+      [_ in never]: never
     }
     Enums: {
       [_ in never]: never
